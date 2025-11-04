@@ -18,11 +18,25 @@
         initMobileMenu();
     });
 
+    // Fallback: Also try initializing on window load in case jQuery ready fires too early
+    $(window).on('load', function() {
+        // Re-check mobile menu if it wasn't initialized
+        if ($('#burger').length && !$('#burger').data('initialized')) {
+            initMobileMenu();
+            $('#burger').data('initialized', true);
+        }
+    });
+
     /**
      * Initialize smooth scrolling for anchor links
      */
     function initSmoothScrolling() {
         $('a[href^="#"]').on('click', function(event) {
+            // Don't prevent default on burger button or menu close button
+            if ($(this).is('#burger, .burger, #mobile-menu-close, .mobile-menu__close')) {
+                return;
+            }
+            
             var target = $(this.getAttribute('href'));
             if (target.length) {
                 event.preventDefault();
@@ -127,35 +141,75 @@
     }
 
     /**
-     * Mobile menu toggle
+     * Mobile menu toggle - Fullscreen overlay
      */
     function initMobileMenu() {
         var $burger = $('#burger');
-        var $close = $('#burger-close');
-        var $drawer = $('#mobile-menu');
-        var $overlay = $('#mobile-menu-overlay');
+        var $menu = $('#mobile-menu');
+        var $closeBtn = $('#mobile-menu-close');
 
-        function openMenu() {
-            $drawer.addClass('open').attr('aria-hidden', 'false');
-            $overlay.addClass('open').attr('aria-hidden', 'false');
+        // Check if elements exist
+        if (!$burger.length || !$menu.length) {
+            return;
+        }
+
+        // Skip if vanilla JS already set it up
+        if ($burger.data('setup') === 'true') {
+            return;
+        }
+
+        function openNav() {
+            $menu.addClass('open').attr('aria-hidden', 'false');
             $('body').addClass('menu-open');
             $burger.attr('aria-expanded', 'true').addClass('is-active');
         }
 
-        function closeMenu() {
-            $drawer.removeClass('open').attr('aria-hidden', 'true');
-            $overlay.removeClass('open').attr('aria-hidden', 'true');
+        function closeNav() {
+            $menu.removeClass('open').attr('aria-hidden', 'true');
             $('body').removeClass('menu-open');
             $burger.attr('aria-expanded', 'false').removeClass('is-active');
         }
 
-        $burger.on('click', function(){
-            if ($drawer.hasClass('open')) { closeMenu(); } else { openMenu(); }
+        // Handle burger button click - use capture phase to catch early
+        $burger.on('click.mobileMenu', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if ($menu.hasClass('open')) {
+                closeNav();
+            } else {
+                openNav();
+            }
         });
-        $overlay.on('click', closeMenu);
+
+        // Touch support
+        $burger.on('touchend.mobileMenu', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if ($menu.hasClass('open')) {
+                closeNav();
+            } else {
+                openNav();
+            }
+        });
+
+        if ($closeBtn.length) {
+            $closeBtn.on('click.mobileMenu', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeNav();
+            });
+            
+            $closeBtn.on('touchend.mobileMenu', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeNav();
+            });
+        }
 
         // Close when clicking a nav link
-        $('#mobile-menu a').on('click', function() { closeMenu(); });
+        $menu.find('.mobile-menu__content a').on('click.mobileMenu', function() {
+            closeNav();
+        });
     }
 
 })(jQuery);

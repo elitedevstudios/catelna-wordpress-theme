@@ -47,7 +47,7 @@
         </div>
 
         <nav id="site-navigation" class="site-navigation">
-            <button class="burger" id="burger" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+            <button type="button" class="burger" id="burger" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
                 <span></span><span></span><span></span>
             </button>
             <ul class="desktop-menu">
@@ -61,18 +61,101 @@
     </div>
 </header>
 
-<!-- Off-canvas Mobile Menu -->
-<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu__header">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo"><?php echo esc_html(get_bloginfo('name')); ?></a>
+<!-- Fullscreen Overlay Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu-overlay" aria-hidden="true">
+    <a href="javascript:void(0)" class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">&times;</a>
+    <div class="mobile-menu__content">
+        <a href="#home" data-scroll-to="home"><?php esc_html_e('Home', 'catena-estates'); ?></a>
+        <a href="#introduction" data-scroll-to="introduction"><?php esc_html_e('About', 'catena-estates'); ?></a>
+        <a href="#features" data-scroll-to="features"><?php esc_html_e('Features', 'catena-estates'); ?></a>
+        <a href="#legacy" data-scroll-to="legacy"><?php esc_html_e('Developer', 'catena-estates'); ?></a>
+        <a href="#contact-form" data-scroll-to="contact-form"><?php esc_html_e('Contact', 'catena-estates'); ?></a>
     </div>
-    <ul class="mobile-menu__nav">
-        <li><a href="#home" data-scroll-to="home">Home</a></li>
-        <li><a href="#introduction" data-scroll-to="introduction">About</a></li>
-        <li><a href="#features" data-scroll-to="features">Features</a></li>
-        <li><a href="#legacy" data-scroll-to="legacy">Developer</a></li>
-        <li><a href="#contact-form" data-scroll-to="contact-form">Contact</a></li>
-    </ul>
 </div>
 
-<div id="mobile-menu-overlay" class="mobile-menu-overlay" aria-hidden="true"></div>
+<script>
+// Simple, reliable mobile menu toggle
+(function() {
+    'use strict';
+    
+    function setupMobileMenu() {
+        var burger = document.getElementById('burger');
+        var menu = document.getElementById('mobile-menu');
+        var closeBtn = document.getElementById('mobile-menu-close');
+        
+        if (!burger || !menu) {
+            return false;
+        }
+        
+        // Skip if already set up
+        if (burger.dataset.setup === 'true') {
+            return true;
+        }
+        
+        function openNav() {
+            menu.classList.add('open');
+            menu.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('menu-open');
+            burger.setAttribute('aria-expanded', 'true');
+            burger.classList.add('is-active');
+        }
+        
+        function closeNav() {
+            menu.classList.remove('open');
+            menu.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('menu-open');
+            burger.setAttribute('aria-expanded', 'false');
+            burger.classList.remove('is-active');
+        }
+        
+        function handleBurgerClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (menu.classList.contains('open')) {
+                closeNav();
+            } else {
+                openNav();
+            }
+        }
+        
+        // Attach burger button events
+        burger.addEventListener('click', handleBurgerClick, true);
+        burger.addEventListener('touchend', handleBurgerClick, true);
+        
+        // Close button
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeNav();
+            }, true);
+            
+            closeBtn.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                closeNav();
+            }, true);
+        }
+        
+        // Close on menu link click
+        var links = menu.querySelectorAll('.mobile-menu__content a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', closeNav);
+        }
+        
+        burger.dataset.setup = 'true';
+        return true;
+    }
+    
+    // Try multiple times to ensure it works
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setupMobileMenu();
+    } else {
+        document.addEventListener('DOMContentLoaded', setupMobileMenu);
+    }
+    
+    window.addEventListener('load', function() {
+        if (!setupMobileMenu()) {
+            setTimeout(setupMobileMenu, 200);
+        }
+    });
+})();
+</script>

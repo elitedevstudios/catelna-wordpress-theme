@@ -6,7 +6,7 @@
  */
 ?>
 
-<section id="contact" class="closing-cta">
+<section id="contact-form" class="closing-cta">
     <div class="container">
         <div class="closing-cta-content">
             <h2>Make Catena At Drax Your New Home</h2>
