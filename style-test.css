@@ -1,0 +1,18 @@
+/*
+Theme Name: Catena Estates at Drax
+Description: A premium WordPress theme for Catena Estates at Drax luxury real estate development.
+Author: Christopher Smikle
+Version: 1.0.0
+Text Domain: catena-estates
+*/
+
+/* Test styles */
+body {
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
