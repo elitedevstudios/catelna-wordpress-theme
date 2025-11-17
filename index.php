@@ -16,11 +16,11 @@ get_header();
     // Hero Section
     get_template_part('templates/sections/hero');
 
-    // Introduction Section
-    get_template_part('templates/sections/introduction');
-
-    // Unit Information Section
+    // Unit Information Section (Exclusive Community Design)
     get_template_part('templates/sections/unit-info');
+
+    // Introduction Section (Discover Your Paradise)
+    get_template_part('templates/sections/introduction');
 
     // Features & Perks Section
     get_template_part('templates/sections/features');
@@ -28,11 +28,14 @@ get_header();
     // Modern Design Section
     get_template_part('templates/sections/modern-design');
 
-    // Parallax Visual Break
+    // Beach Parallax Visual Break
     get_template_part('templates/sections/parallax-break');
 
     // Developer Legacy Section
     get_template_part('templates/sections/legacy');
+
+    // Location Map Section
+    get_template_part('templates/sections/location-map');
 
     // Closing CTA Section
     get_template_part('templates/sections/closing-cta');

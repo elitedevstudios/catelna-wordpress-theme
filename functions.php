@@ -3,7 +3,7 @@
  * Catena Estates at Drax Theme Functions
  *
  * @package CatenaEstates
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 declare(strict_types=1);
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define theme constants
-define('CATENA_ESTATES_VERSION', '1.0.0');
+define('CATENA_ESTATES_VERSION', '1.0.1');
 define('CATENA_ESTATES_DIR', get_template_directory());
 define('CATENA_ESTATES_URI', get_template_directory_uri());
 

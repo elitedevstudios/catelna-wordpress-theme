@@ -156,9 +156,11 @@
                         Investment Opportunity
                     </h3>
 
-                    <p class="feature-description-special">
-                        Prime North Coast location with strong rental potential and capital appreciation in Jamaica's fastest-growing luxury market
-                    </p>
+                    <ul class="feature-description-special investment-bullets">
+                        <li>Prime North Coast location with strong rental potential</li>
+                        <li>Capital appreciation in Jamaica's fastest-growing luxury market</li>
+                        <li>Plot sizes ranging from 0.25 to 0.5 acres</li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -103,5 +103,28 @@
                 Each unit has had a prior approval for a 4th bedroom and bathroom allowing a planned extension as and when you might need to expand for your family or your investment.
             </p>
         </div>
+
+        <!-- Community Layout Section (Image Left, Text Right) -->
+        <div class="modern-design-content mt-16">
+            <!-- Image Content (Left) -->
+            <div class="modern-design-image">
+                <div class="image-container">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Catena Render Floor Plan 14.12.44@2x.jpg"
+                         alt="Catena Estates Community Layout"
+                         loading="lazy"
+                         class="main-image">
+                </div>
+            </div>
+
+            <!-- Text Content (Right) -->
+            <div class="modern-design-text">
+                <h2 class="section-title mb-6">Community Layout</h2>
+                
+                <div class="text-content space-y-4 text-lg leading-relaxed">
+                    <p>Our thoughtfully designed community layout maximizes the natural beauty of the North Coast while ensuring privacy, accessibility, and stunning views for every resident.</p>
+                    <p>The subdivision plan has been carefully crafted to integrate seamlessly with the landscape, providing each unit with optimal positioning to take advantage of the Caribbean Sea vistas and mountain breezes.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

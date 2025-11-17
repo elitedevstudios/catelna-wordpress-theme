@@ -2,7 +2,7 @@
 Theme Name: Catena Estates at Drax
 Description: A premium WordPress theme for Catena Estates at Drax luxury real estate development. Single-page layout showcasing Jamaican paradise living.
 Author: Christopher Smikle
-Version: 1.0.1
+Version: 1.0.2
 Text Domain: catena-estates
 Domain Path: /languages
 License: GPL v2 or later
@@ -898,6 +898,30 @@ h2 {
     opacity: 0.95;
 }
 
+.investment-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.investment-bullets li {
+    position: relative;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-3);
+    color: var(--color-ocean);
+    line-height: var(--leading-relaxed);
+}
+
+.investment-bullets li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-luxury);
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
 .features-decorative {
     margin-top: var(--space-16);
 }
@@ -1058,6 +1082,13 @@ h2 {
     color: var(--color-charcoal);
 }
 
+.catena-highlight-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* ==========================================================================
    LEGACY PROJECTS
    ========================================================================== */
@@ -1153,6 +1184,19 @@ h2 {
     margin-bottom: var(--space-4);
 }
 
+.closing-cta-register-text {
+    font-size: var(--text-lg);
+    color: var(--color-text-light);
+    opacity: 0.95;
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+    font-weight: var(--font-medium);
+}
+
+.closing-cta-register-text p {
+    margin: 0;
+}
+
 .closing-cta .cta-button.cta-secondary {
     background: var(--color-white);
     color: var(--color-charcoal);
@@ -1208,6 +1252,28 @@ h2 {
 
 .trust-item span {
     font-size: var(--text-sm);
+}
+
+/* ==========================================================================
+   LOCATION MAP SECTION
+   ========================================================================== */
+
+.location-map-section {
+    padding: 0;
+    margin: 0;
+}
+
+.location-map-container {
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+.location-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
 }
 
 /* ==========================================================================

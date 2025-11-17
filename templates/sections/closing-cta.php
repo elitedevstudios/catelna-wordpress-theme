@@ -16,6 +16,10 @@
                 <p>Contact us to learn more or schedule a site visit because opportunities like Catena Estates at Drax do not come twice.</p>
             </div>
 
+            <div class="closing-cta-register-text">
+                <p>Register for a viewing or contact our office for more information.</p>
+            </div>
+
             <div class="cta-buttons">
                 <a href="mailto:infodraxhallltd@gmail.com?subject=I'm%20interested%20in%20viewing%20Catena%20Estates%20at%20Drax&body=Dear%20Drax%20Hall%20Team%2C%0A%0AI%20am%20interested%20in%20learning%20more%20about%20Catena%20Estates%20at%20Drax%20and%20would%20like%20to%3A%0A%5B%20%5D%20Schedule%20a%20site%20visit%0A%5B%20%5D%20Receive%20more%20information%0A%5B%20%5D%20Speak%20with%20a%20representative%0A%0AName%3A%0APhone%3A%0AEmail%3A%0AMessage%3A%0A%0ABest%20regards" class="cta-button cta-secondary">
                     Contact Us
@@ -52,3 +56,4 @@
         </div>
     </div>
 </section>
+class="burger"

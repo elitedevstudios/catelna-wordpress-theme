@@ -171,9 +171,14 @@
             <h3>Catena Estates at Drax</h3>
             <p>Represents the next chapter: a modern community boasting 135, 3-bedroom units, with 2 different designs. The Vista is a 2 storey unit, built to suit the landscape and take advantage of the unparalleled views of the Caribbean sea, and the Siesta Unit, a single storey unit, which flows out to a yard space, ideal for building a pool or for enjoying the cool mountain breeze.</p>
 
-            <a href="https://draxhallja.com/projects/" target="_blank" rel="noopener noreferrer" class="cta-button cta-secondary">
-                View Our Portfolio
-            </a>
+            <div class="catena-highlight-buttons">
+                <a href="https://draxhallja.com/" target="_blank" rel="noopener noreferrer" class="cta-button cta-secondary">
+                    Visit Draxhall Estate
+                </a>
+                <a href="https://draxhallja.com/projects/" target="_blank" rel="noopener noreferrer" class="cta-button cta-outline">
+                    View Our Portfolio
+                </a>
+            </div>
         </div>
     </div>
 </section>
