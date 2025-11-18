@@ -328,6 +328,24 @@ function catena_estates_add_preload(): void {
 add_action('wp_head', 'catena_estates_add_preload', 1);
 
 /**
+ * Add CSS custom properties for theme images (root approach for domain portability)
+ */
+function catena_estates_add_image_css_variables(): void {
+    $theme_uri = get_template_directory_uri();
+    ?>
+    <style id="catena-estates-image-variables">
+        :root {
+            --image-background: url('<?php echo esc_url($theme_uri . '/assets/images/background.jpg'); ?>');
+            --image-community-bg: url('<?php echo esc_url($theme_uri . '/assets/images/Catena Render Interior 14.14.32@2x.jpg'); ?>');
+            --image-home-check-white: url('<?php echo esc_url($theme_uri . '/assets/images/home-check-white.png'); ?>');
+            --image-home-check-green: url('<?php echo esc_url($theme_uri . '/assets/images/home-check-green.png'); ?>');
+        }
+    </style>
+    <?php
+}
+add_action('wp_head', 'catena_estates_add_image_css_variables', 2);
+
+/**
  * Add resource hints
  */
 function catena_estates_add_resource_hints(array $hints, string $relation_type): array {

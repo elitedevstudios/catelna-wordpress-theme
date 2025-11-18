@@ -4,10 +4,8 @@
  *
  * @package CatenaEstates
  */
-?>
 
-<?php
-// Draxhall beach image
+// Draxhall beach image - using root approach for domain portability
 $beach_url = get_template_directory_uri() . '/assets/images/draxhall beach.jpeg';
 ?>
 

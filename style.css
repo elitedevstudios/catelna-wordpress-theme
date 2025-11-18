@@ -443,7 +443,7 @@ h2 {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('assets/images/background.jpg');
+    background-image: var(--image-background);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -459,7 +459,7 @@ h2 {
 
 #community.section {
     position: relative;
-    background-image: url('assets/images/Catena Render Interior 14.14.32@2x.jpg');
+    background-image: var(--image-community-bg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -807,7 +807,7 @@ h2 {
 .feature-icon-bg {
     width: 3.5rem;
     height: 3.5rem;
-    background: var(--color-ocean) url('assets/images/home-check-white.png') center/contain no-repeat;
+    background: var(--color-ocean) var(--image-home-check-white) center/contain no-repeat;
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -828,7 +828,7 @@ h2 {
 .feature-icon-bg.group-hover\:scale-110.transition-all.duration-300.align-left {
     width: 3.5rem;
     height: 3.5rem;
-    background: url('assets/images/home-check-green.png') center/contain no-repeat;
+    background: var(--image-home-check-green) center/contain no-repeat;
     border-radius: 0;
     display: flex;
     align-items: center;
