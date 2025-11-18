@@ -56,4 +56,3 @@
         </div>
     </div>
 </section>
-class="burger"
