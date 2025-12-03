@@ -18,6 +18,9 @@ define('CATENA_ESTATES_VERSION', '1.0.4');
 define('CATENA_ESTATES_DIR', get_template_directory());
 define('CATENA_ESTATES_URI', get_template_directory_uri());
 
+// Load theme helper functions
+require_once CATENA_ESTATES_DIR . '/includes/helpers.php';
+
 /**
  * Theme Setup
  */
