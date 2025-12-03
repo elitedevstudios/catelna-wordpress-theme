@@ -42,7 +42,7 @@
                     </h3>
 
                     <p class="feature-description">
-                        Access to a pristine North Coast beach
+                        Access to pristine North Coast beaches — <em>included in maintenance fees</em>
                     </p>
                 </div>
             </div>

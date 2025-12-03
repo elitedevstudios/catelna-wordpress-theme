@@ -5,8 +5,8 @@
  * @package CatenaEstates
  */
 
-// Draxhall beach image - using root approach for domain portability
-$beach_url = get_template_directory_uri() . '/assets/images/draxhall beach.jpeg';
+// Beach image - using high-quality beach photo
+$beach_url = get_template_directory_uri() . '/assets/images/beach 4.jpg';
 ?>
 
 <section id="parallax-break" class="section parallax-break" aria-hidden="true" style="background-image: url('<?php echo esc_url($beach_url); ?>');">

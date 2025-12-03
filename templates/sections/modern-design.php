@@ -34,33 +34,33 @@
         <div class="interior-gallery mt-16">
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Catena Render Interior 14.13.46@2x.jpg"
-                         alt="Catena Estates Interior Design"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interior-living-room.jpg"
+                         alt="Modern Living Room"
                          loading="lazy">
                 </div>
                 <div class="gallery-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Catena Render Interior 14.14.19@2x.jpg"
-                         alt="Catena Estates Interior Design"
+                         alt="Open Plan Living"
                          loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Catena Render Interior 14.14.32@2x.jpg"
-                         alt="Catena Estates Interior Design"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interior-kitchen.jpg"
+                         alt="Designer Kitchen"
                          loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Catena Render Interior 14.15.14@2x.jpg"
-                         alt="Catena Estates Interior Design"
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interior-bedroom.jpg"
+                         alt="Master Bedroom"
                          loading="lazy">
                 </div>
                 <div class="gallery-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Catena Render Interior 14.16.08@2x.jpg"
-                         alt="Catena Estates Interior Design"
+                         alt="Bathroom Design"
                          loading="lazy">
                 </div>
                 <div class="gallery-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Catena Render Interior 14.17.00@2x.jpg"
-                         alt="Catena Estates Interior Design"
+                         alt="Bedroom Suite"
                          loading="lazy">
                 </div>
             </div>

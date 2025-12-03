@@ -16,11 +16,14 @@ get_header();
     // Hero Section
     get_template_part('templates/sections/hero');
 
+    // Introduction Section (Discover Your Paradise) - moved after hero
+    get_template_part('templates/sections/introduction');
+
     // Unit Information Section (Exclusive Community Design)
     get_template_part('templates/sections/unit-info');
 
-    // Introduction Section (Discover Your Paradise)
-    get_template_part('templates/sections/introduction');
+    // Tagline Break (visual separator with stats)
+    get_template_part('templates/sections/tagline-break');
 
     // Features & Perks Section
     get_template_part('templates/sections/features');
