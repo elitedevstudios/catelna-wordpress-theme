@@ -42,7 +42,7 @@
                     </h3>
 
                     <p class="feature-description">
-                        Access to pristine North Coast beaches — <em>included in maintenance fees</em>
+                        Access to Cove at Drax Beach, included in maintenance fees
                     </p>
                 </div>
             </div>
@@ -152,7 +152,7 @@
             <!-- Special Investment Opportunity Card -->
             <div class="feature-card-special hover-lift group relative overflow-hidden will-animate">
                 <div class="relative z-10">
-                    <h3 class="feature-title-special">
+                    <h3 class="feature-title group-hover:text-ocean transition-colors duration-300">
                         Investment Opportunity
                     </h3>
 
